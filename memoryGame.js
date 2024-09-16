@@ -59,10 +59,14 @@ const fillCard = async () => {
         }
     }
 
-    if (cardsLength > 10) {
+    if (cardsLength > 8) {
         cardSize -= ((cardsLength - 2) / 2) * 5;
     }
-    const boxesWidth = Math.round(cards.length / Math.sqrt(cards.length));
+
+    const boxesWidth = Math.round(
+        cards.length / Math.round(Math.sqrt(cards.length))
+    );
+
     board.style.width = `${boxesWidth * cardSize}px`;
 };
 
