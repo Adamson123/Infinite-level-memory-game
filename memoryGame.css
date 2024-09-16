@@ -1,0 +1,99 @@
+@font-face {
+    font-family: isidoraBold;
+    src: url(./IsidoraSansAltBold.otf);
+}
+body {
+    background: rgb(31, 31, 31);
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading span:nth-child(2) {
+    color: rgb(194, 190, 190);
+    font-family: Arial;
+    font-size: 14px;
+}
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.levelDisplay {
+    font-family: isidoraBold;
+    color: #f56c28;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    border: 2px solid rgba(194, 190, 190, 0.342);
+    border-radius: 3px;
+}
+.box {
+    border: 1px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid rgba(194, 190, 190, 0.342);
+}
+
+.flipCardSqr {
+    perspective: 1000px;
+}
+.flipInner {
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("./images/logo.png");
+    background-position: center;
+    background-size: 80px;
+}
+.cardImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* transform: rotateY(180deg); */
+    object-fit: cover;
+}
+.showCard {
+    transform: rotateY(0deg);
+}
+.hideCard {
+    transform: rotateY(180deg);
+}
+.resetBtn {
+    padding: 7px 15px;
+    cursor: pointer;
+    background: #f56c28;
+    border: none;
+    border-radius: 2px;
+    font-family: isidoraBold;
+}
+.correctMatch {
+    animation: correctAni 1s;
+    animation-delay: 0.7s;
+    z-index: 3000;
+}
+
+@keyframes correctAni {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
