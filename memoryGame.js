@@ -10,6 +10,7 @@ let cardInfo = [
     { name: "obito", length: 0 },
 ];
 
+let cardInfoClone = cardInfo
 let cards = [];
 let pickedCards = [];
 let storeMatchedCards = [];
@@ -27,14 +28,7 @@ const fillCard = async () => {
         cardAmouToRem = cardInfo.length - cardsLength;
     }
 
-    let cardInfoClone = [
-        { name: "naruto", length: 0 },
-        { name: "kakashi", length: 0 },
-        { name: "sasuke", length: 0 },
-        { name: "shikamaru", length: 0 },
-        { name: "itachi", length: 0 },
-        { name: "obito", length: 0 },
-    ];
+    
 
     if (amountToAdd) {
         Array.from({ length: amountToAdd }).forEach((i) => {
@@ -77,14 +71,7 @@ const resetBoard = () => {
         box.classList.add("correctMatch");
     });
 
-    cardInfo = [
-        { name: "naruto", length: 0 },
-        { name: "kakashi", length: 0 },
-        { name: "sasuke", length: 0 },
-        { name: "shikamaru", length: 0 },
-        { name: "itachi", length: 0 },
-        { name: "obito", length: 0 },
-    ];
+    cardInfo = cardInfoClone
     pickedCards = [];
     storeMatchedCards = [];
     cards = [];
