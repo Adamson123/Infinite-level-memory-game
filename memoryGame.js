@@ -10,7 +10,14 @@ let cardInfo = [
     { name: "obito", length: 0 },
 ];
 
-let cardInfoClone = cardInfo
+let cardInfoClone = [
+        { name: "naruto", length: 0 },
+        { name: "kakashi", length: 0 },
+        { name: "sasuke", length: 0 },
+        { name: "shikamaru", length: 0 },
+        { name: "itachi", length: 0 },
+        { name: "obito", length: 0 },
+];
 let cards = [];
 let pickedCards = [];
 let storeMatchedCards = [];
